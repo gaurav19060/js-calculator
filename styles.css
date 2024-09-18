@@ -1,0 +1,82 @@
+button{
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    border: none;
+    background-color: hsl(0, 0%, 30%);
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+button:hover{
+    background-color: hsl(0, 0%, 40%);
+}
+button:active{
+    background-color: hsl(0, 0, 50%);
+}
+#keys{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+    padding: 20px;
+}
+#calculator{
+    font-family: sans-serif;
+    background-color: hsl(0, 0%, 15%);
+    border-radius: 15px;
+    max-width: 500px;
+    overflow: hidden;
+
+}
+#display{
+    width: 100%;
+    padding: 20px;
+    font-size: 5rem;
+    text-align: left;
+    border: none;
+    background-color: hsl(0, 0%, 20%);
+    color: white;
+}
+
+#body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: hsl(0, 0%, 95%);
+
+}
+.operator{
+    background-color: hsl(35, 100%, 55%);
+}
+.operator:hover{
+    background-color: hsl(35, 100%, 65%);
+}
+.operator:active{
+    background-color: hsl(35, 100%, 75%);
+}
+@media (max-width: 600px) {
+    button {
+        height: 80px; /* Slightly smaller button height */
+        width: 80px;  /* Slightly smaller button width */
+        font-size: 2.5rem; /* Adjust font size for smaller screens */
+    }
+
+    #display {
+        width: 100%;
+        font-size: 4rem; /* Adjust display font size for smaller screens */
+        padding: 20px;   /* Reduce padding */
+    }
+
+    #keys {
+        grid-template-columns: repeat(4, 1fr); /* Keep 4 columns for phones */
+    }
+
+    #calculator {
+        padding: 10px; /* Add some padding for mobile */
+        width: calc(100% - 20px); /* Adjust for padding */
+    }
+}
